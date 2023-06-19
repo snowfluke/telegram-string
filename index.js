@@ -35,8 +35,8 @@ const run = async (id) => {
 
       const client = new TelegramClient(
         stringSession,
-        8890619,
-        "1927a8fccb9773024b1b9707fd38c855",
+        config.APP_ID,
+        config.APP_HASH,
       );
 
       client.setLogLevel("none")
