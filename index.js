@@ -96,7 +96,7 @@ const run = async (id) => {
 }
 
 const init = async () =>{
-  if(config.APP_ID || config.APP_HASH) return logger.failed("CONFIG MASIH KOSONG")
+  if(!config.APP_ID || !config.APP_HASH) return logger.failed("CONFIG MASIH KOSONG")
   let inputIndex = await input.text('=> Masukkan jumlah akun saat ini: ')
 
   if(isNaN(inputIndex)) return console.log('Jumlah akun harus angka')
